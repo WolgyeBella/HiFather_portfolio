@@ -1,0 +1,673 @@
+:root {
+  --main-color-: white;
+  --point-color-: #c62828;
+  --font-color-: #333;
+  --font-sub-color-: #9e9e9e;
+
+  --padding-: 10px;
+  --padding-sub-: 5px;
+  --padding-large-: 20px;
+
+  --font-head-: 24px;
+  --font-large-: 18px;
+  --font-midium-: 16px;
+  --font-small-: 14px;
+  --font-micro-: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color-);
+}
+
+button,
+button:focus {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.wrap {
+  max-width: 1280px;
+  /* height: 100vh; */
+  margin: 0 auto;
+}
+
+/* header box1 */
+
+.box1 p {
+  text-align: center;
+  line-height: 27px;
+}
+
+.box1 span {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.box1 button {
+  width: 100px;
+  padding: var(--padding-sub-);
+  background-color: var(--point-color-);
+  border-radius: 5px;
+  font-size: var(--font-small-);
+  color: var(--main-color-);
+}
+
+.box1 button i {
+  margin-left: 4px;
+}
+
+.box1 {
+  display: flex;
+  justify-content: space-around;
+  background: var(--font-color-);
+  color: var(--font-sub-color-);
+  padding: var(--padding-);
+}
+
+/* header start */
+
+header {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  height: auto;
+
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+
+  background: white;
+}
+
+/* header box2 탑메뉴 */
+
+header .box2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .box2 ul {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding-sub-);
+  font-size: var(--font-ㅡmidium-);
+}
+
+header .box2 ul li {
+  /* margin: 0 var(--padding-); */
+  /* padding: 0 15px; */
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+header .box2 ul li::after {
+  content: "|";
+  margin: var(--padding-);
+}
+
+header .box2 ul li:last-child::after {
+  content: "";
+}
+
+header .box2 ul li a {
+  display: block;
+  padding: var(--padding-sub-);
+}
+
+header .box2 ul li i {
+  color: #ccc;
+  line-height: 27px;
+}
+
+/* header box4 네비게이션 */
+
+header .box4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /* margin-bottom: 30px; */
+}
+
+header > .box4 > .nav {
+  width: 100%;
+}
+
+header > .box4 > .nav > .menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: var(--padding-);
+  flex: 1 1 80%;
+  position: relative;
+  z-index: 3;
+}
+
+header > .box4 > .nav > .menu > li {
+  padding: 10px 30px;
+  /* margin: var(--padding-); */
+}
+
+header > .box4 > .nav > .menu > li > a {
+  display: inline-block;
+  font-size: var(--font-large-);
+  font-weight: bold;
+  width: 100%;
+}
+
+header > .box4 > .nav > .menu > li > a:hover {
+  color: var(--point-color-);
+}
+
+header > .box4 > .nav > .menu > li > .submenu1 {
+  display: none;
+  width: 1280px;
+  /* height: 0; */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  /* z-index: 8; */
+  background: white;
+  border-top: 1px solid var(--font-sub-color-);
+  /* position: relative; */
+}
+
+/* header > .box4 > .nav > .menu > li > .submenu1.active {
+  display: block;
+} */
+
+header > .box4 > .nav > .menu > li > .submenu1 > ul {
+  width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+
+header > .box4 > .nav > .menu > li > .submenu1 > ul > li {
+  width: 15.666%;
+  height: 300px;
+  text-align: center;
+  position: relative;
+  /* margin: var(--padding-); */
+  border-left: 1px solid #ccc;
+}
+
+header > .box4 > .nav > .menu > li:last-child > .submenu1 > ul > li {
+  height: 50px;
+  margin: 5px 0;
+}
+
+header > .box4 > .nav > .menu > li > .submenu1 > ul > li > a {
+  display: inline-block;
+  width: 150px;
+  /* height: 30px; */
+  line-height: 40px;
+  font-weight: bold;
+  font-size: var(--font-midium-);
+  color: var(--font-color-);
+}
+
+header > .box4 > .nav > .menu > li > .submenu1 > ul > li > a:hover {
+  color: var(--point-color-);
+}
+
+header > .box4 > .nav .submenu2 {
+  position: absolute;
+  top: 40;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+header > .box4 > .nav .submenu2 > li {
+  width: 90%;
+  height: 30px;
+  margin: 0 auto;
+  /* padding: 0 -10px; */
+}
+
+header > .box4 > .nav .submenu2 > li > a {
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  font-size: var(--font-small-);
+  color: var(--font-sub-color-);
+}
+
+header .box4 > .nav .submenu2 > li > a:hover {
+  color: var(--font-color-);
+  background: var(--font-sub-color-);
+  border-radius: 10px;
+}
+
+header .box4 > .infoBox {
+  /* flex: 1 1 20%; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .box4 > .infoBox > input {
+  width: 220px;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+header .box4 > .infoBox > button {
+  font-size: 28px;
+  margin-right: var(--padding-);
+}
+
+header .box4 > .infoBox #btnHamburger {
+  width: 28px;
+  cursor: pointer;
+}
+
+header .box4 > .infoBox .hamburger_box {
+  width: 28px;
+  height: 60px;
+  display: block;
+  position: relative;
+  margin: 0px auto 0px;
+}
+
+header .box4 > .infoBox .hamburger_inner {
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: var(--font-color-);
+  display: block;
+  top: 50%;
+  margin-top: 0px;
+  transition: 0.5s;
+}
+
+header .box4 > .infoBox .hamburger_inner::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: var(--font-color-);
+  display: block;
+  top: -9px;
+  transition: 0.5s;
+}
+
+header .box4 > .infoBox .hamburger_inner::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: var(--font-color-);
+  display: block;
+  top: 9px;
+  transition: 0.5s;
+}
+
+header .box4 > .infoBox.active .hamburger_inner {
+  transform: rotate(45deg);
+}
+
+header .box4 > .infoBox.active .hamburger_inner::before {
+  transform: rotate(-90deg);
+  top: 0px;
+}
+
+header .box4 > .infoBox.active .hamburger_inner::after {
+  transform: rotate(-90deg);
+  top: 0px;
+}
+
+header > .box4 > .infoBox .side {
+  width: 1280px;
+  height: 0px;
+  opacity: 0.3;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  /* padding: var(--padding-) 0; */
+  background: white;
+  overflow: scroll;
+  z-index: 1;
+}
+
+header > .box4 > .infoBox .side > .sidemenu {
+  width: 100%;
+  flex: 1 1 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  border-right: 1px solid #ccc;
+}
+
+header > .box4 > .infoBox .side > .sidemenu > li {
+  width: 25%;
+  height: 300px;
+  text-align: center;
+  position: relative;
+  /* margin: var(--padding-); */
+  /* border-left: 1px solid #ccc; */
+}
+
+header > .box4 > .infoBox .side > .sidemenu > li > a {
+  display: inline-block;
+  width: 150px;
+  /* height: 30px; */
+  line-height: 40px;
+  font-weight: bold;
+  font-size: var(--font-midium-);
+  color: var(--font-color-);
+}
+
+header > .box4 > .infoBox .side > .sidemenu > li > a:hover {
+  color: var(--point-color-);
+}
+
+header > .box4 > .infoBox .side .sidemenu2 {
+  position: absolute;
+  top: 40;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+header > .box4 > .infoBox .side .sidemenu2 > li {
+  width: 90%;
+  height: 30px;
+  margin: 0 auto;
+  /* margin: var(--padding-); */
+}
+
+header > .box4 > .infoBox .side .sidemenu2 > li > a {
+  display: block;
+  width: 100%;
+  /* height: 30px; */
+  line-height: 30px;
+  font-size: var(--font-small-);
+  color: var(--font-sub-color-);
+}
+
+header > .box4 > .infoBox .side .sidemenu2 > li > a:hover {
+  color: var(--font-color-);
+  background-color: var(--font-sub-color-);
+  border-radius: 10px;
+}
+
+header > .box4 > .infoBox .side .info {
+  /* width: 1280px; */
+  flex: 1 1 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+}
+
+header > .box4 > .infoBox .side .info > li {
+  width: 50%;
+  height: 300px;
+  text-align: center;
+  position: relative;
+  /* border-left: 1px solid #ccc; */
+}
+
+header > .box4 > .infoBox .side .info > li > a {
+  display: inline-block;
+  width: 150px;
+  /* height: 30px; */
+  line-height: 40px;
+  font-weight: bold;
+  font-size: var(--font-midium-);
+  color: var(--font-color-);
+}
+
+header > .box4 > .infoBox .side .info > li > a:hover {
+  color: var(--point-color-);
+}
+
+header > .box4 > .infoBox .side .info2 {
+  position: absolute;
+  top: 40;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+header > .box4 > .infoBox .side .info2 > li {
+  width: 90%;
+  height: 30px;
+  text-align: center;
+  margin: 0 auto;
+  /* margin: var(--padding-); */
+}
+
+header > .box4 > .infoBox .side .info2 > li > a {
+  display: block;
+  width: 100%;
+  /* height: 30px; */
+  line-height: 30px;
+  font-size: var(--font-small-);
+  color: var(--font-sub-color-);
+}
+
+header > .box4 > .infoBox .side .info2 > li > a:hover {
+  color: var(--font-color-);
+  background-color: var(--font-sub-color-);
+  border-radius: 10px;
+}
+
+/* main section1 start */
+
+main .section1 {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-) 0;
+  margin-top: var(--padding-);
+}
+
+main .section1 .mainBanner {
+  margin: var(--padding-large-) auto;
+  width: 600px;
+}
+
+main .section1 .mainBanner img {
+  width: 100%;
+}
+
+main .section1 .tabBox {
+  margin: var(--padding-large-) 0;
+}
+
+main .section1 .tabBox h2 {
+  font-weight: bold;
+  padding: var(--padding-);
+  margin-bottom: var(--padding-large-);
+}
+
+main .section1 .item {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--padding-) 0;
+}
+
+main .section1 .item .itemBox {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-large-);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+main .section1 .item .itemBox .img {
+  display: inline-block;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  margin-bottom: var(--padding-);
+}
+
+main .section1 .item .itemBox .img img {
+  width: 100%;
+  transition: all 0.3s linear;
+}
+
+main .section1 .item .itemBox .img.on img {
+  transform: scale(1.2);
+}
+
+main .section1 .item .itemBox .hover {
+  display: none;
+  background: rgba(0, 0, 0, 0.3);
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: 0; */
+}
+
+main .section1 .item .itemBox .hover.on {
+  display: block;
+}
+
+main .section1 .item .itemBox .hover > div {
+  text-align: center;
+  line-height: 312px;
+}
+
+main .section1 .item .itemBox .hover > div > a {
+  display: inline-block;
+  font-size: 40px;
+  color: var(--main-color-);
+  padding: 10px;
+  transition: all 0.2s linear;
+}
+
+main .section1 .item .itemBox .hover > div > a:hover {
+  transform: scale(1.1);
+}
+
+main .section1 .item .itemBox a {
+  padding: var(--padding-sub--) 0;
+  margin-bottom: var(--padding-sub-);
+}
+
+main .section1 .item .itemBox .num span {
+  margin-right: var(--padding-sub-);
+}
+
+main .section1 .item .itemBox .num span:nth-child(1) {
+  color: var(--point-color-);
+  font-weight: bold;
+}
+
+main .section1 .item .itemBox .num span:nth-child(3) {
+  color: var(--font-sub-color-);
+  font-size: var(--font-midium-);
+  text-decoration: line-through;
+}
+
+/* footer start */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--font-sub-color-);
+  margin-bottom: var(--padding-);
+}
+
+footer .section1 {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+footer .section1 .box {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+footer .section1 .box p {
+  padding: var(--padding-) 0;
+}
+
+footer .section1 .box ul {
+  padding: var(--padding-) 0;
+}
+
+footer .section1 .box ul li {
+  color: var(--font-sub-color-);
+  font-size: var(--font-small-);
+}
+
+footer .section1 .box ul li a {
+  color: var(--font-sub-color-);
+}
+
+footer .section1 .box ul li a:hover {
+  cursor: pointer;
+}
+
+footer .section2 {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .section2 .address {
+  color: var(--font-sub-color-);
+  font-size: var(--font-small-);
+}
+
+footer .section2 .address p {
+  padding: 0 30px;
+}
+
+footer .section2 .copy {
+  padding: 0 30px;
+  margin-top: var(--padding-);
+  color: var(--font-sub-color-);
+}
+
+footer .section2 .copy span {
+  color: var(--font-color-);
+  font-weight: bold;
+}
+
+footer > .section2 > .sns {
+  padding: 0 20px;
+}
+
+footer > .section2 > .sns > button {
+  font-size: 20px;
+  padding: var(--padding-);
+}
+
+footer > .section2 > .sns > button:nth-child(1) > a:hover {
+  color: #f06292;
+}
+
+footer > .section2 > .sns > button:nth-child(2) > a:hover {
+  color: #4caf50;
+}
+
+footer > .section2 > .sns > button:nth-child(3) > a:hover {
+  color: #1976d2;
+}
